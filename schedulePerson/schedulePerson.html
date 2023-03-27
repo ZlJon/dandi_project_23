@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서로에게 이득이 되는 아르바이트 구직정보 사이트 단디 알바">
+  <meta name="keywords" content="dandi">
+  <meta name="author" content="4팀">
+  <link rel="stylesheet" href="./common/common.css">
+  <link rel="stylesheet" href="./schedulePerson.css">
+  <title>스케줄 보기-단디알바</title>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- 헤더 -->
+    <header id="header">
+      <div class="header__title"><a href="#">단디알바</a></div>
+      <div class="header__subTitle"><a href="#">:짧지만 확실하게</a></div>
+      <div class="header__logout"><input class="header__logoutButton" type="button" value="로그아웃"></input></div>
+
+    </header>
+    <!-- 글로벌 메뉴바 -->
+    <nav id="gnb">
+      <ul class="gnb__info"><a href="#">채용정보</a>
+        <div class="container1">
+          <li class="gnb__infoLnb"><a href="#">구인 게시판</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__cum"><a href="#">커뮤니티</a>
+        <div class="container2">
+          <li class="gnb__cumLnb"><a href="#">고충 게시판</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__member"><a href="#">개인 서비스</a>
+        <div class="container3">
+          <li class="gnb__memberLnb1"><a href="#">이력서 작성</a></li>
+          <li class="gnb__memberLnb2"><a href="#">이력서 관리</a></li>
+          <li class="gnb__memberLnb3"><a href="#">스케줄 보기</a></li>
+          <li class="gnb__memberLnb4"><a href="#">회원정보 수정</a></li>
+          <li class="gnb__memberLnb5"><a href="#">비밀번호 변경</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__manager"><a href="#">기업 서비스</a>
+        <div class="container4">
+          <li class="gnb__managerLnb1"><a href="#">구인게시글 관리</a></li>
+          <li class="gnb__managerLnb2"><a href="#">지원자 이력서 관리</a></li>
+          <li class="gnb__managerLnb3"><a href="#">스케줄 등록</a></li>
+          <li class="gnb__managerLnb4"><a href="#">회원정보 수정</a></li>
+          <li class="gnb__managerLnb5"><a href="#">비밀번호 변경</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__support"><a href="#">고객지원</a>
+        <div class="container5">
+          <li class="gnb__supportLnb1"><a href="#">공지사항</a></li>
+          <li class="gnb__supportLnb2"><a href="#">아이디 찾기</a></li>
+          <li class="gnb__supportLnb3"><a href="#">비밀번호 찾기</a></li>
+          <li class="gnb__supportLnb4"><a href="#">회원탈퇴</a></li>
+        </div>
+      </ul>
+    </nav>
+    <!-- 메인: insert content -->
+    <main id="main">
+      <div class="profile">
+        <div class="profile-inner">
+          <i class="fa-regular fa-user"></i>
+          <span>구직자명</span>
+          <span>(아이디)</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="calendar">
+          <div class="month">
+            <div class="leftBtn"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="date">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="rightBtn"><i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+          <div class="weekdays">
+            <div>일</div>
+            <div>월</div>
+            <div>화</div>
+            <div>수</div>
+            <div>목</div>
+            <div>금</div>
+            <div>토</div>
+          </div>
+          <div class="days"></div>
+        </div>
+      </div>
+      <dialog id="scheduleModalBox">
+        <form method="dialog">
+          <menu><button><i class="fa-solid fa-xmark"></i></button></menu>
+          <p>시급: 9620원</p>
+          <p>근무기간: 3월 23일</p>
+          <p>근무요일: 수요일</p>
+          <p>근무시간: 09:00 ~ 12:00</p>
+          <p>근무지역: 부산 해운대구 파송동</p>
+        </form>
+      </dialog>
+    </main>
+    <!-- 푸터 위쪽 -->
+    <footer id="footerUp">
+      <div class="footerUp__button1"><a href="#">
+          <pre> 회사소개 </pre>
+        </a></div>
+      <div class="footerUp__button2"><a href="#">
+          <pre> 이용약관 </pre>
+        </a></div>
+      <div class="footerUp__button3"><a href="#">
+          <pre> 고객센터 </pre>
+        </a></div>
+      <div class="footerUp__button4"><a href="#">
+          <pre> 개인정보처리 방침 </pre>
+        </a></div>
+    </footer>
+    <!-- 푸터 아래쪽 -->
+    <footer id="footerDown">
+      <div class="footerDown__text1">단디알바</div>
+      <div class="footerDown__text2">회사 소개 울산KH정보교육원</div>
+      <div class="footerDown__text3">대표자 이상인</div>
+      <div class="footerDown__text4">주소 울산시 남구 OOOOOO</div>
+      <div class="footerDown__text5">고객센터 010-1234-5678</div>
+      <div class="footerDown__text6">E-mail abcd@abcd.com</div>
+      <div class="footerDown__text7">Copyright 2023 단디알바 Corp.All. Right Reserved.</div>
+    </footer>
+    <!-- 공백 태그-->
+    <div class="sp1"></div>
+    <div class="sp2"></div>
+    <div class="sp3"></div>
+    <div class="sp4"></div>
+    <div class="sp5"></div>
+    <div class="sp6"></div>
+    <div class="sp7"></div>
+    <div class="sp8"></div>
+    <div class="sp9"></div>
+    <div class="sp10"></div>
+  </div>
+  <script src="./schedulePerson.js"></script>
+  <script src="https://kit.fontawesome.com/881b9bf5d3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

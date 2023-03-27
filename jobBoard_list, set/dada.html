@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 스마트 에디터 예제</title>
+    <link rel="stylesheet" href="../smarteditor2-master/workspace/static/css/ko_KR/smart_editor2_items.css" >
+    <script type="text/javascript" src="../smarteditor2-master/workspace/static/js/service/HuskyEZCreator.js" ></script>
+</head>
+<body>
+  <div class="row">
+    <!-- 포스트 추가하는 곳-->
+    <!-- Naver SmartEditor 2.8.2를 사용하였습니다. -->
+    <h3>Naver Smart Editor 2.0</h3>
+    <form action="insertStudentInfoForm" method="post">
+        <div id="smarteditor2-master">
+            <textarea
+                name="editorTxt"
+                id="editorTxt"
+                rows="20"
+                cols="10"
+                placeholder="내용을 입력해주세요"
+                style="width: 500px"></textarea>
+        </div>
+        <input type="button" value="내용콘솔에" onclick="submitPost()"/>
+    </form>
+    <!-- 포스트 추가하는 곳-->
+</div>
+    
+    <script>
+let oEditors = [];
+
+smartEditor = function() {
+    console.log("Naver SmartEditor")
+    nhn.husky.EZCreator.createInIFrame({
+        oAppRef: oEditors,
+        elPlaceHolder: "editorTxt",
+    sSkinURI: "../smarteditor2-master/workspace/static/SmartEditor2Skin.html",
+    fCreator: "createSEditor2"
+    })
+}
+
+$(document).ready(function() {
+    smartEditor()
+})
+    </script>
+</body>
+</html>

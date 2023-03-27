@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+/* * {
+  outline: 1px solid gray;
+} */
+
+#main {
+  grid-area: c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+
+}
+
+/* 테이블 컨테이너 */
+#main .main__scheduleTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100rem;
+  
+}
+
+/* 테이블 타이틀 */
+#main .main__scheduleTable .title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 5px 0;
+  justify-content: start;
+  font-weight: var(--header-subTitle-700);
+}
+
+/* 테이블 헤더 */
+#main .main__scheduleTable .main__tableHeader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--header-subTitle-700);
+  border-top: 2px solid var(--color-normal-green); 
+  border-bottom: 2px solid var(--color-normal-green); 
+} 
+#main .main__scheduleTable .main__tableHeader div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 130%;
+  width: 100%;
+  height: 100%;
+  margin: 5px 0;
+  border-right: 1px solid var(--color-normal-gray);
+} 
+
+/* 테이블 바디 */
+#main .main__scheduleTable .main__tableBody {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-normal-gray);
+}
+#main .main__scheduleTable .main__tableBody.hidden {
+  display: none;
+}
+#main .main__scheduleTable .main__tableBody.form {
+  display: flex;
+  flex-direction: row;
+}
+#main .main__scheduleTable .main__tableBody div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 200%;
+  width: 100%;
+  height: 100%;
+  margin: 10px 0;
+}
+/* 요일 부분 수정필요 */
+#main .main__scheduleTable .main__tableBody div .days {
+  display: flex;
+  height: 125px;
+  justify-content: center;
+  align-items: center;
+  line-height: 130px;
+}
+#main .main__scheduleTable .main__tableBody div .days::-webkit-scrollbar{
+  display: none;
+}
+/*  */
+#main .main__scheduleTable .main__tableBody div span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 10pt;
+}
+#main .main__scheduleTable .main__tableBody div span input {
+  border: 2px solid var(--color-normal-gray);
+  background-color: white;
+  border-radius: 10px;
+  width: 75%;
+  height: 25px;
+  line-height: 100%;
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#main .main__scheduleTable .main__tableBody div input {
+  border: 2px solid var(--color-normal-gray);
+  background-color: white;
+  border-radius: 10px;
+  width: 75%;
+  height: 25px;
+  text-align: center;
+  line-height: 100%;
+  padding-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+#main .main__scheduleTable .main__tableBody div select {
+  border: 2px solid var(--color-normal-gray);
+  background-color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  line-height: 100%;
+  text-align: center;
+}
+
+#main .main__scheduleTable .main__tableBody div button {
+  border: 2px solid var(--color-normal-gray);
+  background-color: white;
+  border-radius: 10px;
+  width: 65px;
+  height: 30px;
+  line-height: 100%;
+  margin: 10px 0;
+} 
+#main .main__scheduleTable .main__tableBody div button:hover {
+  border: 2px solid var(--color-normal-green);
+  background-color: white;
+  cursor: pointer;
+} 
+#main .main__scheduleTable .main__tableBody div i {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 5px 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: var(--color-normal-gray);
+  border-radius: 25px;
+}
+
+/* 테이블의 스케줄 추가 버튼 */
+#main .main__scheduleTable .main__btnAdd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+#main .main__scheduleTable .main__btnAdd button {
+  border: 2px solid var(--color-normal-gray);
+  background-color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  line-height: 100%;
+}
+#main .main__scheduleTable .main__btnAdd button:hover {
+  border: 2px solid var(--color-normal-green);
+  background-color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 모달창1 */
+#modalBox1 {
+  justify-content: center;
+  text-align: center;
+  font-weight: var(--header-subTitle-700);
+  width: 270px;
+  height: 130px;
+  border: 2px solid var(--color-normal-deep-gray);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#modalBox1::backdrop{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+}
+#modalBox1 .container .itemContent {
+  font-size: var(--normal-title-size);
+  font-weight: var(--header-subTitle-700);
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+#modalBox1 .container .btn {
+  margin: 0 20px;
+  border: 2px solid var(--color-normal-green);
+  border-radius: 5px;
+  font-size: 12pt;
+  font-weight: var(--header-subTitle-700);
+  cursor: pointer;
+}
+#modalBox1 .container .btn:active {
+  background-color: var(--color-normal-green);
+
+}
+/* 모달창2 */
+#modalBox2 {
+  justify-content: center;
+  text-align: center;
+  font-weight: var(--header-subTitle-700);
+  width: 270px;
+  height: 130px;
+  border: 2px solid var(--color-normal-deep-gray);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#modalBox2::backdrop{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+}
+#modalBox2 .container .itemContent {
+  font-size: var(--normal-title-size);
+  font-weight: var(--header-subTitle-700);
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+#modalBox2 .container .btn {
+  margin: 0 20px;
+  border: 2px solid var(--color-normal-green);
+  border-radius: 5px;
+  font-size: 12pt;
+  font-weight: var(--header-subTitle-700);
+  cursor: pointer;
+}
+#modalBox2 .container .btn:active {
+  background-color: var(--color-normal-green);
+
+}

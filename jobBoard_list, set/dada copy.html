@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 자동완성</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+}
+
+.suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.suggestions li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #ddd;
+}
+
+</style>
+<body>
+    <div class="container">
+        <label for="email">이메일 주소:</label>
+        <input type="email" id="email" name="email" autocomplete="off" oninput="autoCompleteEmail(this)">
+        <ul id="suggestions" class="suggestions">
+        </ul>
+    </div>
+</body>
+<script>
+const emailProviders = ["gmail.com", "naver.com", "daum.net", "yahoo.com", "outlook.com", "nate.com"];
+
+function autoCompleteEmail(input) {
+    const suggestions = document.getElementById("suggestions");
+    suggestions.innerHTML = "";
+    const emailParts = input.value.split("@");
+
+    if (emailParts.length > 1 && emailParts[1] !== "") {
+        const matches = emailProviders.filter(provider => provider.startsWith(emailParts[1]));
+        
+        if (matches.length > 0) {
+            suggestions.style.display = "block";
+            matches.forEach(match => {
+                const li = document.createElement("li");
+                li.innerText = emailParts[0] + "@" + match;
+                li.onclick = () => {
+                    input.value = emailParts[0] + "@" + match;
+                    suggestions.innerHTML = "";
+                    suggestions.style.display = "none";
+                };
+                suggestions.appendChild(li);
+            });
+        } else {
+            suggestions.style.display = "none";
+        }
+    } else {
+        suggestions.style.display = "none";
+    }
+}
+
+
+</script>
+</html>

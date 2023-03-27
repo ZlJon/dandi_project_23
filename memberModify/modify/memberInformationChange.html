@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서로에게 이득이 되는 아르바이트 구직정보 사이트 단디 알바">
+  <meta name="keywords" content="dandi">
+  <meta name="author" content="4팀">
+  <title>단디알바</title>
+  <link rel="stylesheet" href="./common/common.css">
+  <link rel="stylesheet" href="./memberInformationChangeLayout.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://kit.fontawesome.com/72dc3cd256.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- 헤더 -->
+    <header id="header">
+      <div class="header__title"><a href="#">단디알바</a></div>
+      <div class="header__subTitle"><a href="#">:짧지만 확실하게</a></div>
+      <div class="header__login"><input class="header__loginButton" type="button" value="로그인"></input></div>
+      <div class="header__signUp"><input class="header__signUpButton" type="button" value="회원가입"></div>
+    </header>
+    <!-- 글로벌 메뉴바 -->
+    <nav id="gnb">
+      <ul class="gnb__info"><a href="#">채용정보</a>
+        <div class="container1">
+          <li class="gnb__infoLnb"><a href="#">구인 게시판</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__cum"><a href="#">커뮤니티</a>
+        <div class="container2">
+          <li class="gnb__cumLnb"><a href="#">고충 게시판</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__member"><a href="#">개인 서비스</a>
+        <div class="container3">
+          <li class="gnb__memberLnb1"><a href="#">이력서 작성</a></li>
+          <li class="gnb__memberLnb2"><a href="#">이력서 관리</a></li>
+          <li class="gnb__memberLnb3"><a href="#">스케줄 보기</a></li>
+          <li class="gnb__memberLnb4"><a href="#">회원정보 수정</a></li>
+          <li class="gnb__memberLnb5"><a href="#">비밀번호 변경</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__manager"><a href="#">기업 서비스</a>
+        <div class="container4">
+          <li class="gnb__managerLnb1"><a href="#">구인게시글 관리</a></li>
+          <li class="gnb__managerLnb2"><a href="#">지원자 이력서 관리</a></li>
+          <li class="gnb__managerLnb3"><a href="#">스케줄 등록</a></li>
+          <li class="gnb__managerLnb4"><a href="#">회원정보 수정</a></li>
+          <li class="gnb__managerLnb5"><a href="#">비밀번호 변경</a></li>
+        </div>
+      </ul>
+      <ul class="gnb__support"><a href="#">고객지원</a>
+        <div class="container5">
+          <li class="gnb__supportLnb1"><a href="#">공지사항</a></li>
+          <li class="gnb__supportLnb2"><a href="#">아이디 찾기</a></li>
+          <li class="gnb__supportLnb3"><a href="#">비밀번호 찾기</a></li>
+          <li class="gnb__supportLnb4"><a href="#">회원탈퇴</a></li>
+        </div>
+      </ul>
+    </nav>
+    <!-- 메인: insert content -->
+    <main id="main">
+      <header id="mainHeader">
+        <ul class="main__headerMenu">
+          <li><button class="main__menu1">회원정보수정</button></li>
+          <li><button class="main__menu2">비밀번호변경</button></li>
+          <li><button class="main__menu3">회원탈퇴</button></li>
+        </ul>
+      </header>
+      <div id="mainContent">
+        <div class="mainContentMenu1">
+          <li class="area1"><label for="myId"><p style="display:inline;">&ensp;아&ensp;&ensp;&ensp;&ensp;&ensp;이&ensp;&ensp;&ensp;&ensp;&ensp;디</p></label></li><input type="text" id="myId" readonly>
+          <li class="area2"><label for="myName"><br><p style="display:inline;">&ensp;&ensp;&ensp;이&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;름&ensp;&ensp;&ensp;&ensp;</p></label></li><input type="text" id="myName" readonly>
+          <li class="area3"><label for="email"><br><p style="display:inline;">&ensp;이&emsp;&ensp;&ensp;&ensp;메&ensp;&emsp;&ensp;&ensp;일</p></label></li><input type="email" onkeyup="noSpaceForm(this);" onchange="noSpaceForm(this);" maxlength="30" id="email" placeholder="&ensp;이메일을 입력하세요." >
+          <li class="area4"><label for="phone"><br><p style="display:inline;">&ensp; 휴&ensp;대&ensp;폰&ensp;번&ensp;호 &ensp;</p></label></li><input type="text" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" pattern="\d*" maxlength="11" id="phone" placeholder="&ensp;휴대폰번호를 -없이 입력하세요."><br>
+          <div id="pw-text">올바른 휴대폰번호가 아닙니다.</div>
+          <li class="area5"><label for="phone"><br><p style="display:inline;">&ensp;&ensp;&ensp;주&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;소&ensp;&ensp;&ensp;</p></label></li>
+          <li class="area5"><input type="text" style="display:inline;" id="sample6_postcode" placeholder="&ensp;우편번호"></li>
+          <li class="area6"><input type="button" style="display:inline;" id="adderssBtn" onclick="sample6_execDaumPostcode()" value="&ensp;우편번호 찾기"><br></li>
+          <li class="area7"><input type="text" style="display:inline;" id="sample6_address" placeholder="&ensp;주소"></li>
+          <li class="area8"><input type="text" style="display:inline;" id="sample6_detailAddress" placeholder="&ensp;상세주소"></li>
+          <li class="area9"><input type="text" style="display:inline;" id="sample6_extraAddress" placeholder="&ensp;참고항목"></li>
+          <li class="area10"><li class="area9"><label for="companyNumber"><br><p style="display:inline;">사 업 자 등 록 번 호</p></label></li><input type="text" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" pattern="\d*" maxlength="10" id="companyNumber" placeholder="&ensp;사업자등록번호를 입력하세요."></li></li>
+          <br><br><li class="area10"><button id="compl" onclick="location.href='#'" ></a>수정완료</button></li>
+        </ul>
+        <ul class="mainContentMenu2">
+          <li class="PW1"><label for="currentPW"><br><p style="display:inline;">&ensp;현재 비밀번호 &ensp;</p></label></li><input type="password" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" oninput="onlyAlpNum(this)" id="currentPW" minlength="8" maxlength="20" placeholder="&ensp;현재 비밀번호">
+          <i class="fa-solid fa-circle-check" style="color: #79cd9c;"></i><i class="fa-regular fa-circle-check" style="color: #79cd9c;"></i>
+          <li class="PW2"><label for="newPW2"><br><p style="display:inline;">새 비밀번호 입력</p></label></li><input type="password" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" oninput="onlyAlpNum(this)" id="newPW2" minlength="8" maxlength="20" placeholder="&ensp;새 비밀번호">
+          <i class="fa-solid fa-circle-check a" style="color: #79cd9c;"></i><i class="fa-regular fa-circle-check a" style="color: #79cd9c;"></i>
+          <li class="PW3"><label for="newPW3"><br><p style="display:inline;">새 비밀번호 확인</p></label></li><input type="password" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" oninput="onlyAlpNum(this)" id="newPW3" minlength="8" maxlength="20" placeholder="&ensp;새 비밀번호 재확인">
+          <i class="fa-solid fa-circle-check b" style="color: #79cd9c;"></i><i class="fa-regular fa-circle-check b" style="color: #79cd9c;"></i>
+          <br><br>
+          <li class="PW4"><p><br>안전한 비밀번호 사용하는 방법<br><br>
+            &ensp;영문, 숫자를 조합해서 8~20자로 작성(띄어쓰기 불가)<br><br>
+            &ensp;영문, 숫자를 조합해서 작성 / 아이디와 동일하거나 개인정보가 포함된 비밀번호는 사용 비권장 연속된 영문/숫자나 키보드의 연속패턴은 사용 비권장(ex AAA, 1234, ASDF)<br><br>
+            &ensp;6개월마다 비밀번호 변경 권장</p>
+          <br><br><li class="PW5"><button id="compl" onclick="location.href='#'">변경완료</button></li>
+        </ul>
+        <ul class="mainContentMenu3">
+          <li class="UR1"><label for="UR1-1"><br><p style="display:inline;">&ensp;아&ensp;&ensp;이&ensp;&ensp;디&ensp;</p></label></li><input type="text" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" id="UR1_1" readonly>
+          <li class="UR2"><label for="UR2-1"><br><p style="display:inline;">비밀번호 입력</p></label></li><input type="password" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" oninput="onlyAlpNum(this)" id="UR2_1" minlength="8" maxlength="20" placeholder="&ensp;비밀번호">
+          <i class="fa-solid fa-circle-check c" style="color: #79cd9c;"></i><i class="fa-regular fa-circle-check c" style="color: #79cd9c;"></i>
+          <li class="UR3"><label for="UR3-1"><br><p style="display:inline;">비밀번호 확인</p></label></li><input type="password" onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" oninput="onlyAlpNum(this)" id="UR3_1" minlength="8" maxlength="20" placeholder="&ensp;비밀번호 재확인">
+          <i class="fa-solid fa-circle-check d" style="color: #79cd9c;"></i><i class="fa-regular fa-circle-check d" style="color: #79cd9c;"></i>
+          <br><br>
+          <li class="UR4"><p><br>회원탈퇴 전 꼭 확인해주세요<br>
+            1. 동일한 아이디로 재가입 볼까
+            탈퇴 신청 시 즉시 처리되며, 해당 아이디로 재가입/로그인이 불가능 합니다.<br>
+            2. 탈퇴 즉시 회원정보 삭제
+            탈퇴 즉시 이력서 및 구직활동 정보가 모두 삭제되며, 삭제된 정보는 복구되지 않습니다. 단, 공공적 성격의 게씨물은 삭제되지 않으므로 탈퇴 전 미리 삭제해주세요.<br>
+            3. 이용 정보 일정기간 보관
+            "전자상거래 등에서 소비자보호에 관한 법들'에 따라 유료 결제에 관한 계약 기록운 5년간 보관합니다.
+            부적합 정보, 이용제한 및 직계에 관한 기록은 일정기간 보관합니다.</p>
+          <br><br><li class="UR5"><button id="compl" onclick="location.href='#'">회원탈퇴완료</button></li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- 푸터 위쪽 -->
+    <footer id="footerUp">
+      <div class="footerUp__button1"><a href="#">
+          <pre> 회사소개 </pre>
+        </a></div>
+      <div class="footerUp__button2"><a href="#">
+          <pre> 이용약관 </pre>
+        </a></div>
+      <div class="footerUp__button3"><a href="#">
+          <pre> 고객센터 </pre>
+        </a></div>
+      <div class="footerUp__button4"><a href="#">
+          <pre> 개인정보처리 방침 </pre>
+        </a></div>
+    </footer>
+    <!-- 푸터 아래쪽 -->
+    <footer id="footerDown">
+      <div class="footerDown__text1">단디알바</div>
+      <div class="footerDown__text2">회사 소개 울산KH정보교육원</div>
+      <div class="footerDown__text3">대표자 이상인</div>
+      <div class="footerDown__text4">주소 울산시 남구 OOOOOO</div>
+      <div class="footerDown__text5">고객센터 010-1234-5678</div>
+      <div class="footerDown__text6">E-mail abcd@abcd.com</div>
+      <div class="footerDown__text7">Copyright 2023 단디알바 Corp.All. Right Reserved.</div>
+    </footer>
+    <!-- 공백 태그-->
+    <div class="sp1"></div>
+    <div class="sp2"></div>
+    <div class="sp3"></div>
+    <div class="sp4"></div>
+    <div class="sp5"></div>
+    <div class="sp6"></div>
+    <div class="sp7"></div>
+    <div class="sp8"></div>
+    <div class="sp9"></div>
+    <div class="sp10"></div>
+  </div>
+  <script src="./memberInformationChange.js"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</body>
+</html>

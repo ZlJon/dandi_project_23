@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 상세보기</title>
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 250vh;
+      margin: 0;
+      margin-top: -550px;
+    }
+    .container {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 800px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .box-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .content {
+      white-space: pre-wrap;
+    }
+    .work-condition {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .work-condition-item {
+      display: flex;
+      justify-content: space-between;
+    }
+    .separator {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .back-button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="width: 740px;" >
+    <h1 class="title" style="text-align: center;">SW 개발자 모집</h1>
+    <div class="detail-box">
+      <div>
+        <div class="box-title" style="text-align: center;">울산KH 정보 교육원</div>
+        <hr width=”20” color="green" noshade />
+        기업명: 회사명<br>
+        담당자: 홍길동<br>
+        기업 전화번호: 02-1234-5678<br>
+        담당자 전화번호: 010-1234-5678<br>
+        이메일: example@example.com<br>
+      </div>
+
+      <div>
+      
+        <hr width=”20” color="green" noshade />
+        <div class="box-title">근무 조건</div>
+        <div class="work-condition-box">
+          <div class="work-condition-item">
+            <span>급여:</span>
+            <span>시급 1만원</span>
+          </div>
+          <div class="work-condition-item">
+            <span>업직종:</span>
+            <span>서비스직</span>
+          </div>
+          <div class="work-condition-item">
+            <span>근무기간:</span>
+            <span>1개월</span>
+          </div>
+          <div class="work-condition-item">
+            <span>고용형태:</span>
+            <span>아르바이트</span>
+          </div>
+          <div class="work-condition-item">
+            <span>근무요일:</span>
+            <span>주 5일</span>
+          </div>
+          <div class="work-condition-item">
+            <span>근무 지역:</span>
+           
+            <span>서울 강남구</span>
+        </div>
+        <div class="work-condition-item">
+          <span>근무시간:</span>
+          <span>09:00 - 18:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr width=”20” color="green" noshade />
+  <div class="box-title">학력</div>
+  학력: 대학교 졸업(4년제)<br>
+  <hr width=”20” color="green" noshade />
+  <div class="box-title">자격증</div>
+  자격증: 정보처리기사<br>
+  <hr width=”20” color="green" noshade />
+  <div class="box-title">상세요강</div>
+  <div class="content">
+   
+    이미지 첨부 한 것
+    테스트 
+
+    홍길동
+    홍길남
+    홍길북
+    홍길서
+    가
+    나
+    다
+    라
+    마
+    바
+    사
+    고
+    구
+    려
+    가
+    라
+    자
+
+  </div>
+  <div class="button-container">
+    <button class="back-button" onclick="window.history.back();">뒤로 가기</button>
+  </div>
+</div>
+</body>
+</html>
